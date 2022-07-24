@@ -1,9 +1,9 @@
 import face_recognition as inc
 import cv2 as incc
 
-
+#........................................................................................................................................................................................
 #note : (pip install dlib , pip install face-recognition) #note2 if you can't download try these (pip install cmake , pip install wheel , pip install dlib , pip install face-recognition
-
+#........................................................................................................................................................................................
 
 yol = "Your video .mp4"
 
