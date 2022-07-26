@@ -52,6 +52,7 @@ while a == 1:
     oto.click(1128,419)
     zaman.sleep(2)
     oto.click(259,349)
+    oto.click(210,349)
     i = int(i)
     zaman.sleep(3)
     
