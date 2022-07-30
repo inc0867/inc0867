@@ -26,7 +26,7 @@ kur = float(kur)
 print("dolar şuan (satış)",kur)
 
 
-a = int(input("dolarınız varsa eger 0 girerseniz tl yi dolara çevirin dolar girin:"))
+a = int(input("(not:(0 girerseniz tl yi dolara çevirirsiniz))dolarınız varsa eger dolar girin:"))
 
 
 if a > 0:
