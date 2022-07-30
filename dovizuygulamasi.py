@@ -31,7 +31,7 @@ a = int(input("(not:(0 girerseniz tl yi dolara çevirirsiniz))dolarınız varsa 
 
 if a > 0:
     print(a,"dolar şuanda:",kur * a,"TL")
-elif a < 0:
+elif a == 0:
     b = int(input("TL giriniz:"))
 
     print(b,"TL şuanda ",b / kur, "dolar")
