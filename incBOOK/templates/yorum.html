@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="jumbotron">
+<h3>{{id}} adlı paylaşııma yorum yapın</h3>
+<p><small>Yorum yaparken lütfen görgü kurallarına dikkat edin</small></p>
+</div>
+<h3>Yorumlar</h3>
+<hr>
+{% if yorum %}
+{% for i in yorum %}
+<br>
+<br>
+<div class="card">
+  <h5><a href="">{{i.yorumuyapan}}</a></h5>
+  <hr>
+  <p>
+    <strong>{{i.yorum}}</strong>
+  </p>
+  <hr>
+  <p class="small">{{i.yorumT}}</p>
+  
+ 
+
+
+</div>
+
+{% endfor %}
+
+
+
+{% else %}
+<button class="btn btn-danger">Bu paylaşıma henüz bir yorum yapılmamıştır</button>
+{% endif %}
+<br>
+<br>
+<hr>
+<button class="btn btn-outline-primary"><a href="/yorumy/{{id}}">Yorum Yap</a></button>
+
+
+
+{% endblock %}

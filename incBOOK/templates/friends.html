@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<br>
+<br> 
+<br>
+<h3>Arkadaşlar</h3>
+<hr>
+
+<div class="input-group">
+    <div class="form-outline">
+      <input type="search" id="form1" class="form-control"/>
+      <label class="form-label" for="form1">Search</label>
+      <br>
+    </div>
+    <button type="button" class="btn btn-primary">
+      <i class="search">Ara</i>
+    </button>
+</div>
+<h3>Arkadaşlar</h3>
+<hr>
+<p>Eklenecektir......</p>
+<br>
+<br>
+<h3>Kullanıcılar</h3>
+<hr>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">.</th>
+      <th scope="col">isim</th>
+      <th scope="col">Kayıt tarihi</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+{% if kullanıcılar %}
+{% for i in kullanıcılar %}
+{% if i.username  == session["username"] %}
+
+{% else %}
+  <tbody>
+    <tr>
+      <th scope="row">.</th>
+      <td><a href="">{{i.username}}</a></td>
+      <td>{{i.kayıtT}}</td>
+      <td><button type="button" class="btn btn-primary">Ekle</button></td>
+      <td><button type="button" class="btn btn-outline-primary"><a href="/Chat/{{i.username}}">Chat</a></button></td>
+    </tr>
+  </tbody>
+{% endif %}
+{% endfor %}
+
+{% else %}
+<div class="btn btn-danger">kullanıcı yok :)</div>
+
+{% endif %}
+</table>
+
+{% endblock %}

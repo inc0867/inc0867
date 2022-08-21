@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% from "includes/formhelpers.html" import render_field %}
+<br>
+<br>
+<div class="jumbotron">
+    <h3>Chat with <strong>{{id}}</strong> </h3>
+    
+</div>
+<br>
+<br>
+<div class="jumbotron">
+    <br>
+    {% for i in Chat %}
+    {% if session["logged_in"] %}
+    <div class="card">
+        <div class="card-header">
+          {{ i.gonderen }}
+        </div>
+        <div class="card-body">
+          
+          <p class="card-text">{{i.mesaj}}</p>
+          
+        </div>
+    </div>
+    <br>
+    <br>
+    {% else %}
+    <div class="card text-right">
+        <div class="card-header">
+          {{ i.gonderen }}
+        </div>
+        <div class="card-body">
+          
+          <p class="card-text">{{i.mesaj}}</p>
+          
+        </div>
+    </div>
+    <br>
+    <br>
+
+
+    {% endif %}
+
+    {% endfor %}
+    <br>
+    <form method="post">
+        {{ render_field(form.mesaj,class = "form-control") }}
+    
+        <button class="btn btn-outline-primary" type="submit">Gönder</button>
+    </form>
+
+</div>
+
+
+
+
+{% endblock %}

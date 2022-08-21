@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+<div class="card-body p-4">
+  <div class="d-flex text-black">
+    <div class="flex-shrink-0">
+    </div>
+    <div class="flex-grow-1 ms-3">
+      <h5 class="mb-1">{{ session["username"] }}</h5>
+      
+      <div class="d-flex justify-content-start rounded-3 p-2 mb-2" style="background-color: #efefef;">
+        <div>
+          <p class="small text-muted mb-1">Paylaşımlar</p>
+          <p class="mb-0">41</p>
+        </div>
+        <div class="px-3">
+          <p class="small text-muted mb-1">Takipçiler</p>
+          <p class="mb-0">976</p>
+        </div>
+        <div class="px-3">
+          <p class="small text-muted mb-1">Oluşturulma Tarihi</p>
+          <p class="mb-0">{{ date }}</p>
+        </div>
+      </div>
+      <div class="d-flex pt-1">
+        <button type="button" class="btn btn-outline-primary me-1 flex-grow-1">düzenle</button>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<h3>Paylaşımların</h3>
+<hr>
+{% if paylasımlar %}
+
+{% for i in paylasımlar %}
+<div class="card">
+  <h5 class="card-header"><strong>Paylaşan:</strong><a href="">{{i.author}}</a></h5>
+  <div class="card-body">
+    <h5 class="card-title"><strong>Başlık:</strong>{{i.title}}</h5>
+    <p class="card-text">{{i.content}}</p>
+    <button class="btn btn-danger" type="submit">Sil</button>
+    
+
+  </div>
+</div>
+<br>
+<br>
+{% endfor %}
+
+{% else %}
+<div class="alert alert-danger">Şuanlık paylaşımınız bulunmamaktadır</div>
+{% endif %}
+
+
+{% endblock %}

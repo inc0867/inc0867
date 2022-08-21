@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h3>Paylaşımlar</h3>
+<hr>
+{% if paylasımlar %}
+
+{% for i in paylasımlar %}
+<div class="card">
+    <h5 class="card-header"><strong>Paylaşan:</strong><a href=""> {{i.author}}</a></h5>
+    <div class="card-body">
+      <h5 class="card-title"><strong>Başlık:</strong>{{i.title}}</h5>
+      <p class="card-text">{{i.content}}</p>
+      <p><strong>Oluşturma Tarihi:</strong> {{i.Cdate}}</p>
+      <button class="btn btn-outline-primary"><a href="/yorum/{{i.title}}">yorum</a></button>
+      {% if session["username"] == i.author %}
+      <button class="btn btn-danger" type="submit">Sil</button>
+      
+
+
+      {% else %}
+      <p></p>
+      {% endif %}
+      
+
+    </div>
+</div>
+<br>
+<br>
+{% endfor %}
+
+
+
+{% else %}
+<div class="alert alert-danger">Şuanlık sistemde paylasım bulunmamaktadır</div>
+
+{% endif %}
+
+
+{% endblock %}
