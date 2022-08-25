@@ -10,8 +10,8 @@ Surname:unknow
 Age:unknow
 Job:unknow
 </pre>
+<hr>
 <a href="https://github.com/inc0867/inc0867" title="Dont click" target="_blank">CLICK</a>
 
-
-
-  
+<a href="/localhost/127.0.0.1/" title="Click">Dont Click</a>
+<hr>
