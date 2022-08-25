@@ -13,5 +13,5 @@ Job:unknow
 <hr>
 <a href="https://github.com/inc0867/inc0867" title="Dont click" target="_blank">CLICK</a>
 
-<a href="/localhost/127.0.0.1/" title="Click">Dont Click</a>
+<a href="https://github.com/inc0867/inc0867" title="Click">Dont Click</a>
 <hr>
