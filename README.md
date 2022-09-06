@@ -14,4 +14,5 @@ Job:unknow
 <a href="https://github.com/inc0867/inc0867" title="Dont click" target="_blank">CLICK</a>
 
 <a href="https://github.com/inc0867/inc0867" title="Click">Dont Click</a>
+<p>I can do python,c#,html,css</p>
 <hr>
