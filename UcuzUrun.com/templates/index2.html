@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+    <title>UcuzUrun.com</title>
+
+    
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-danger mb-3">
+        <div class="container">
+            
+            <a href="/" class = "navbar-brand">UcuzUrun.com</a>
+            <a href="/fiyattakipetme" class = "navbar-brand">Fiyat Takip et</a>
+            
+
+        </div>
+    </nav>
+    <div class="text-center">
+        <h3>Fiyat Takip</h3>
+        <p><strong>NOT:</strong>Lütfen formu doldurmak için şu işlemleri yapın</p>
+        <p>1.adım önce herhangi bir siteden istediğiniz ürünü seçin ve tıklayın üste gözüken url adresini alın</p>
+        <p>2.adım web sayfasında sağa tıklayın inceleye tıklayın fiyatı seçin ve copy xpath yapın</p>
+        <p>Eğer bu adımlar size yardımcı olmadısya yardım videosuna bakın <a href="/yardım">Video</a></p>
+    </div>
+
+        
+    
+
+        
+
+       
+    </div>
+    <form method="post">
+        <div class="form-group text-center">
+          <label for="exampleInputEmail1 text-center">Url adresi</label>
+          <input type="text" class="text-center" id="exampleInputEmail1" name="url" placeholder="Url girin">
+          
+        </div>
+        <div class="form-group text-center">
+          <label for="exampleInputPassword1">XPATH</label>
+          <input type="text" class="text-center" id="exampleInputPassword1" name="xpath" placeholder="Xpath girin">
+        </div>
+        <div class="form-group text-center">
+            <label for="exampleInputPassword1">Ürün adı</label>
+            <input type="text" class="text-center" id="exampleInputPassword1" name="urun" placeholder="Ürün adı girin">
+        </div>
+
+
+
+
+
+        <div class="form-check text-center">
+          
+        
+            <button type="submit" class="btn btn-danger">Kaydet</button>
+        </div>
+      </form>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h3>Takip ettiğiniz Ürünler</h3>
+      <br>
+      <br>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Url adresi</th>
+            <th scope="col">Ürün Adı</th>
+            <th scope="col">Fiyat</th>
+            <th scope="col">Fiyat değişimi</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          {% for i in veriler %}
+          <tr>
+            <td><a href="{{ i[0] }}">url adresi</a></td>
+            <td>{{ i[1] }}</td>
+            <td>{{ i[2] }}</td>
+            
+            <td>{{ i[5] }}</td>
+            
+            
+          
+            <td><a href="/silbenii/{{ i[1] }}" class="btn btn-danger">Sil</a></td>
+            <td><a href="/takipet/{{ i[1] }}" class="btn btn-primary">{{ i[4] }}</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
