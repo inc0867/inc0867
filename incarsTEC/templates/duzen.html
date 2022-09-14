@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+<h2>Profil Duzenle</h2>
+<h4>{{ isim }}</h4>
+<form method="post">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Profil resmi düzenle</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="https://as1.ftcdn.net/v2/jpg/01/74/35/40/1000_F_174354059_oegCS2Hmk3eTwTPCfoROZVDfbAh3Gp1v.jpg" name="resim">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Açıklama</label>
+      <input type="text" class="form-control" name="acıklama">
+    </div>
+    <button type="submit" class="btn btn-outline-danger">Kaydet</button>
+</form>
+
+{% endblock %}

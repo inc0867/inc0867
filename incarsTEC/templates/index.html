@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+<br>
+<br>
+<div class="jumbotron">
+    {% if session["logged_in"] == True %}
+    <h3>Hoşgeldiniz, {{ session["username"] }}</h3>
+    {% else %}
+    <h3>Hoşgeldiniz</h3>
+    <p><strong>Size daha iyi bir hizmet sunmamız için lutfen giriş yapın</strong></p>
+    <a href="/gir" class="btn btn-outline-danger text-center">Giriş Yap</a>
+    {% endif %}
+</div>
+<br>
+<br>
+
+
+{% endblock %}

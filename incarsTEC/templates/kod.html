@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+<br>
+<br>
+<a href="/mobil" class="btn btn-outline-primary text-right">Mobil Develop</a>
+<a href="/kod" class="btn btn-outline-primary text-left">Web Develop</a>
+<br>
+<br>
+<h3>Dosya Yükle</h3>
+{% if session["username"] == Deneme %}
+
+<form method="post">
+   
+</form>
+  {% if veri  %}
+  <p>{{ veri }}</p>
+  {% endif %}
+<br>
+<br>
+{% else %}
+<p class="danger">Dosya yüklemek için yeterli yetkiniz yok</p>
+<br>
+<br>
+{% endif %}
+
+
+<h3>Paylasımlar</h3>
+
+<table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Dosya adı</th>
+        <th scope="col">Konusu</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Web sitesi</td>
+        <td>web sitesi</td>
+        <td></td>
+        <td><a href="" class="btn btn-outline-primary">Git</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+{% endblock %}
